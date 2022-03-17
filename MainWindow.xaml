@@ -1,0 +1,34 @@
+﻿<Window x:Class="OSCP5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OSCP5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="755" Width="800">
+    <Grid x:Name="MainGrid">
+        <Button x:Name="btm_CreateProcess" Content="Создать новый процесс" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Click="btm_CreateProcess_Click" Width="134"/>
+        <Button x:Name="btm_CreateSomeProcess" Content="Создать 10 процессов" HorizontalAlignment="Left" Margin="323,10,0,0" VerticalAlignment="Top" Click="btm_CreateSomeProcess_Click" Height="47"/>
+        <TextBox x:Name="tb_NewProcessName" HorizontalAlignment="Left" Height="23" Margin="184,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Grid x:Name="FCFS" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,-0.4,-0.4" Width="794" Height="726">
+            <Label x:Name="lbl_FCFS_Name" Content="FCFS" Margin="10,365,615,336"/>
+            <ListBox x:Name="FCFSProcessesListBox" HorizontalAlignment="Left" Height="320" Margin="10,390,0,0" VerticalAlignment="Top" Width="169"/>
+            <ListBox x:Name="FCFSProcessesStateListBox" HorizontalAlignment="Left" Height="200" Margin="184,513,-684,-613" VerticalAlignment="Top" Width="600"/>
+            <Label x:Name="lbl_FCFS_CurrentProcessProperties" Content="" HorizontalAlignment="Left" Margin="184,408,0,0" VerticalAlignment="Top" Width="257" Background="White" BorderBrush="#FFABADB3" BorderThickness="1" FontSize="10" Height="100
+                   "/>
+            <Label x:Name="lbl_FCFS_SelectedProcessProperties" Content="" HorizontalAlignment="Left" Margin="446,408,0,0" VerticalAlignment="Top" Width="257" BorderThickness="1" BorderBrush="#FFABADB3" FontSize="10" Height="100"/>
+            <Label x:Name="lbl_FCFS_Status_Ex" Content="Информация о выполняемом процессе" Margin="184,383,353,318"/>
+            <Label x:Name="lbl_FCFS_Status_W8" Content="Информация о выбранном процессе" Margin="446,383,91,318"/>
+        </Grid>
+        <Grid x:Name="RR" HorizontalAlignment="Left" Height="726" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,-0.4">
+            <Label x:Name="lbl_RR_Name" Content="RR (Quant = 50)" Margin="10,10,615,691"/>
+            <ListBox x:Name="RRProcessesListBox" HorizontalAlignment="Left" Height="320" Margin="10,35,0,0" VerticalAlignment="Top" Width="169"/>
+            <ListBox x:Name="RRProcessesStateListBox" HorizontalAlignment="Left" Height="200" Margin="184,185,-684,-285" VerticalAlignment="Top" Width="600"/>
+            <Label x:Name="lbl_RR_CurrentProcessProperties" Content="" HorizontalAlignment="Left" Margin="184,80,0,0" VerticalAlignment="Top" Width="257" Background="White" BorderBrush="#FFABADB3" BorderThickness="1" FontSize="10" Height="100"/>
+            <Label x:Name="lbl_RR_SelectedProcessProperties" Content="" HorizontalAlignment="Left" Margin="446,80,0,0" VerticalAlignment="Top" Width="257" BorderThickness="1" BorderBrush="#FFABADB3" FontSize="10" Height="100"/>
+            <Label x:Name="lbl_RR_Status_Ex" Content="Информация о выполняемом процессе" Margin="184,55,353,646"/>
+            <Label x:Name="lbl_RR_Status_W8" Content="Информация о выбранном процессе" Margin="446,55,91,646"/>
+        </Grid>
+
+    </Grid>
+</Window>
